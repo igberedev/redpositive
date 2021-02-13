@@ -30,6 +30,22 @@ const Speakers = () => {
                         Creator of Global Privacy &amp; Security by Design
                     </p>
                 </div>
+                <div className="speaker__block">
+                    <img 
+                        src="https://uploads-ssl.webflow.com/5cc5b056b2ea2eb61233e46f/5d59bb9d4a2e8661c5b1678b_Dr.%20Cavoukian%20picture.JPG" 
+                        width="128" 
+                        height="128" 
+                        srcSet="https://uploads-ssl.webflow.com/5cc5b056b2ea2eb61233e46f/5d59bb9d4a2e8661c5b1678b_Dr.%20Cavoukian%20picture-p-800.jpeg 800w, https://uploads-ssl.webflow.com/5cc5b056b2ea2eb61233e46f/5d59bb9d4a2e8661c5b1678b_Dr.%20Cavoukian%20picture-p-1080.jpeg 1080w, https://uploads-ssl.webflow.com/5cc5b056b2ea2eb61233e46f/5d59bb9d4a2e8661c5b1678b_Dr.%20Cavoukian%20picture.JPG 1254w" 
+                        sizes="(max-width: 479px) 81vw, 128px" 
+                        alt=""
+                        className="speaker__image"
+                    />
+                    <h3 className="speakers__name">Dr. Ann</h3>
+                    <h3 className="speakers__name">Coovokain</h3>
+                    <p className="paragraph-4">
+                        Creator of Global Privacy &amp; Security by Design
+                    </p>
+                </div>
 
                 <div className="speaker__block">
                     <img 
@@ -49,6 +65,23 @@ const Speakers = () => {
 
 
             <div className="speakers__image-block">
+                <div className="speaker__block">
+                    <img 
+                        src="https://uploads-ssl.webflow.com/5cc5b056b2ea2eb61233e46f/5d59bb9d4a2e8661c5b1678b_Dr.%20Cavoukian%20picture.JPG" 
+                        width="128" 
+                        height="128" 
+                        srcSet="https://uploads-ssl.webflow.com/5cc5b056b2ea2eb61233e46f/5d59bb9d4a2e8661c5b1678b_Dr.%20Cavoukian%20picture-p-800.jpeg 800w, https://uploads-ssl.webflow.com/5cc5b056b2ea2eb61233e46f/5d59bb9d4a2e8661c5b1678b_Dr.%20Cavoukian%20picture-p-1080.jpeg 1080w, https://uploads-ssl.webflow.com/5cc5b056b2ea2eb61233e46f/5d59bb9d4a2e8661c5b1678b_Dr.%20Cavoukian%20picture.JPG 1254w" 
+                        sizes="(max-width: 479px) 81vw, 128px" 
+                        alt=""
+                        className="speaker__image"
+                    />
+                    <h3 className="speakers__name">Dr. Ann</h3>
+                    <h3 className="speakers__name">Coovokain</h3>
+                    <p className="paragraph-4">
+                        Creator of Global Privacy &amp; Security by Design
+                    </p>
+                </div>
+
                 <div className="speaker__block">
                     <img 
                         src="https://uploads-ssl.webflow.com/5cc5b056b2ea2eb61233e46f/5d59bb9d4a2e8661c5b1678b_Dr.%20Cavoukian%20picture.JPG" 
@@ -114,6 +147,24 @@ const Speakers = () => {
                         Head Of Engineering, Ada
                     </p>
                 </div>
+
+                <div className="speaker__block">
+                    <img 
+                        src="https://uploads-ssl.webflow.com/5cc5b056b2ea2eb61233e46f/5d59bb9d4a2e8661c5b1678b_Dr.%20Cavoukian%20picture.JPG" 
+                        width="128" 
+                        height="128" 
+                        srcSet="https://uploads-ssl.webflow.com/5cc5b056b2ea2eb61233e46f/5d59bb9d4a2e8661c5b1678b_Dr.%20Cavoukian%20picture-p-800.jpeg 800w, https://uploads-ssl.webflow.com/5cc5b056b2ea2eb61233e46f/5d59bb9d4a2e8661c5b1678b_Dr.%20Cavoukian%20picture-p-1080.jpeg 1080w, https://uploads-ssl.webflow.com/5cc5b056b2ea2eb61233e46f/5d59bb9d4a2e8661c5b1678b_Dr.%20Cavoukian%20picture.JPG 1254w" 
+                        sizes="(max-width: 479px) 81vw, 128px" 
+                        alt=""
+                        className="speaker__image"
+                    />
+                    <h3 className="speakers__name">Dr. Ann</h3>
+                    <h3 className="speakers__name">Coovokain</h3>
+                    <p className="paragraph-4">
+                        Creator of Global Privacy &amp; Security by Design
+                    </p>
+                </div>
+
             </div>
 
         </div>

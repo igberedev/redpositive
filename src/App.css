@@ -1,0 +1,7 @@
+.app {
+    position: relative;
+    background-color: #24B677;
+    height: min-content;
+    padding-bottom: min-content;
+    overflow-y: auto;
+}

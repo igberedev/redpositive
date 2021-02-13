@@ -1,0 +1,25 @@
+.container {
+    margin-top: 20rem;
+}
+
+.container__bold-text {
+    margin-right: 10%;
+    margin-left: 10%;
+    font-family: Gilroy, sans-serif;
+    color: #ffffff;
+    font-size: 70px;
+    /* line-height: 72px; */
+    font-weight: 700;
+}
+
+.container__light-text {
+    min-width: 0px;
+    margin-top: -50px;
+    margin-right: 10%;
+    margin-left: 10%;
+    font-family: Gilroy, sans-serif;
+    color: #ffffffff;
+    font-size: 16px;
+    line-height: 32px;
+    font-weight: 400;
+}

@@ -1,7 +1,22 @@
 .app {
     position: relative;
-    background-color: #24B677;
+    background-color: #fff;
+    height: 100vh;
+    overflow: auto;
+}
+
+.weather-forex {
+    display: flex;
+    justify-content: space-between;
+
     height: min-content;
-    padding-bottom: min-content;
-    overflow-y: auto;
+}
+
+.header {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    margin: 1.5rem 0;
 }

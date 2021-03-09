@@ -1,6 +1,7 @@
 .get-weather {
     background-color: #FFFFFF;
     width: 100%;
+    height: min-content;
     
     display: flex;
     flex-direction: column;
@@ -26,14 +27,14 @@
     font-size: 3rem;
     font-weight: bold;
 
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
 }
 
 .get-weather--temp {
     display: flex;
     align-items: center;
 
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 500;
     color: #333;
 }
@@ -77,6 +78,14 @@
     grid-gap: 2rem;
 
     padding-top: 2rem;
+}
+
+@media only screen and (max-width: 650px) {
+    .display-three-days {
+        margin: 0;
+        grid-gap: 0rem;
+        padding-top: 0.5rem;
+    }
 }
 
 .empty-data {

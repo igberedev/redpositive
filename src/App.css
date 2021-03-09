@@ -40,7 +40,7 @@
 
 @media only screen and (max-width: 650px) {
     .weather-forex {
-        grid-template-rows: 10vh, 60vh, 1fr;
+        grid-template-rows: 40vh, 60vh, 1fr;
         grid-template-columns: 100vw;
     }
     .test-1 {

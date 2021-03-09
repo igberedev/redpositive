@@ -1,14 +1,48 @@
 .exchange-rate {
-    background-color: lawngreen;
+    background-color: #FFFFFF;
 
-    width: 50%;
+    height: 15rem;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 45vw;
 
+    margin-top: 1rem;
     font-size: 2rem;
+
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+
+    justify-content: center;
+
+    border: 1px solid black;
+}
+
+@media only screen and (max-width: 650px) {
+    .exchange-rate {
+        width: 95vw;
+    }
+}
+
+.cell {
+    padding-top: 1rem;
+    justify-self: center;
+    width: 100%;
 
     text-align: center;
 
+    /*border: 1px solid black;*/
 }
+
+.cell--header {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.cell--green {
+    color: #88C799;
+}
+
+.cell--red {
+    color: #FF7464;
+}
+

@@ -1,9 +1,7 @@
 .get-weather {
-    background-color: skyblue;
-    width: 50%;
-    padding: 1rem;
-    height: min-content;
-
+    background-color: #FFFFFF;
+    width: 100%;
+    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,9 +9,33 @@
     text-align: center;
 }
 
+@media only screen and (max-width: 650px) {
+    .get-weather {
+        height: 50%;
+    }
+}
+
 .get-weather__time {
     display: flex;
     grid-gap: .5rem;
+
+    margin-bottom: 2rem;
+}
+
+.get-weather--place {
+    font-size: 3rem;
+    font-weight: bold;
+
+    margin-bottom: 5rem;
+}
+
+.get-weather--temp {
+    display: flex;
+    align-items: center;
+
+    font-size: 4rem;
+    font-weight: 500;
+    color: #333;
 }
 
 .get-weather__time--text {
@@ -21,7 +43,12 @@
     color: #333;
 }
 
+.get-weather--color {
+    color: #F1BEA6;
+}
+
 .three-days {
+    width: 80%;
     font-size: 1.5rem;
     font-weight: 500;
     border: 1px solid #79B252;
@@ -30,18 +57,26 @@
 
     text-align: center;
 
-    cursor: pointer;
+    cursor: pointer; 
+
+    transition: all .4s;
 }
+
+.three-days:hover {
+    background-color: royalblue;
+} 
 
 .display-three-days {
     margin-top: .5rem;
-    width: 50%;
     font-size: 1rem;
 
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     justify-content: center;
     align-items: center;
+    grid-gap: 2rem;
+
+    padding-top: 2rem;
 }
 
 .empty-data {
@@ -54,4 +89,13 @@
     grid-gap: 1rem;
 
     font-size: 1.3rem;
+}
+
+.day-data--text {
+    color: #333;
+    font-size: 1.5rem;
+    font-weight: 500;
+
+    display: flex;
+    align-items: center;
 }

@@ -2,15 +2,23 @@
     position: relative;
     background-color: #fff;
     height: 100vh;
-    overflow: auto;
+    padding-left: 1.5rem;
+
+    margin-bottom: 4rem;
 }
 
-.weather-forex {
+@media only screen and (max-width: 650px) { 
+    .app {
+        padding: 0rem;
+    }
+}
+
+/*.weather-forex {
     display: flex;
     justify-content: space-between;
 
     height: min-content;
-}
+}*/
 
 .header {
     text-align: center;
@@ -19,4 +27,73 @@
     text-transform: uppercase;
 
     margin: 1.5rem 0;
+}
+
+.weather-forex {
+    display: grid;
+    grid-template-columns: repeat(2, 48vw);
+
+    grid-gap: .5rem;
+
+    grid-template-rows: repeat(2, 60vh);
+}
+
+@media only screen and (max-width: 650px) {
+    .weather-forex {
+        grid-template-rows: 10vh, 60vh, 1fr;
+        grid-template-columns: 100vw;
+    }
+    .test-1 {
+        grid-row: 1/2;
+        grid-column: 1/2;
+    }
+
+    .test-2 {
+        margin-left: 1rem;
+        grid-row: 2/3;
+        grid-column: 1/2;
+    }
+
+    .test-3 {
+        margin-left: 1rem;
+        grid-row: 3/4;
+        grid-column: 1/2;
+    }
+}
+
+.test-1 {
+    grid-row: 1/2;
+    grid-column: 1/2;
+}
+
+
+.test-2 {
+    grid-row: 1/2;
+    grid-column: 2/3;
+}
+
+.test-3 {
+    grid-row: 2/3;
+    grid-column: 2/3;
+}
+
+@media only screen and (max-width: 650px) {
+    .test-1 {
+        grid-row: 1/2;
+        grid-column: 1/2;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .test-2 {
+        grid-row: 2/3;
+        grid-column: 1/2;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .test-3 {
+        grid-row: 3/4;
+        grid-column: 1/2;
+    }
 }

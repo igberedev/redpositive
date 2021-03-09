@@ -1,5 +1,6 @@
 .map-container {
     position: relative;
 
-    margin-top: 2rem;
+    grid-row: 1/0;
+    grid-column: 1/2;
 }

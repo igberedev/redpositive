@@ -15,9 +15,16 @@ const GetWeather = (props) => {
 
     const [place, setPlace] = useState("")
 
+    const [day_1, setDay_1] = useState("")
+    const [day_2, setDay_2] = useState("")
+    const [day_3, setDay_3] = useState("")
+
     const [displayThreeDays, setDisplayThreedays] = useState("false")
 
     let curr = new Date();
+
+    
+    //console.log(curr.toISOString().substr(0,10));
 
     //let currdate = curr.toISOString().substr(0,10);
 
@@ -27,6 +34,14 @@ const GetWeather = (props) => {
 
 
     useEffect(() => {
+
+        setDay_1(new Date().toDateString().substr(0, 10))
+
+        setDay_2(new Date(1615300090176 + 86400000).toDateString().substr(0, 10))
+
+        setDay_3(new Date(1615300090176 + 86400000 + 86400000).toDateString().substr(0, 10))
+    
+    
         // Get the Weather data for the next three days
         const getData = async () => {
             try {
@@ -45,6 +60,8 @@ const GetWeather = (props) => {
                     parseInt(response.data.daily[1].temp.day - 273), 
                     parseInt(response.data.daily[2].temp.day - 273)
                 ])    
+
+                console.log(response.data)
 
                 // setWeatherData(response.data)
             }  catch (e) {
@@ -94,20 +111,44 @@ const GetWeather = (props) => {
             return (
                 <div className="display-three-days">
                     <div className="day-data">
-                        <p className="margin-right">{months[curr.getMonth()]} {curr.getDate()}</p>
-                        <p className="margin-right">{weatherForcasts[0]}&#176;C</p>
-                        <p className="margin-right">{dailyDescription[0]}</p>
+                        <p className="day-data--text">{day_1}</p>
+                        <div className="day-data--text">
+                            <img
+                                src={weatherForcasts[0] > 34 ? "/img/clearDay.png" : "/img/normalDay.png"}
+                                alt="Weather_Image"
+                                className=""
+                            />
+                            <p className="day-data--text">{weatherForcasts[0]}&#176;C</p>
+                        </div>
+                        
+                        <p className="day-data--text">{dailyDescription[0]}</p>
 
                     </div>
+
                     <div className="day-data">
-                        <p className="margin-right">{months[curr.getMonth()]} {curr.getDate() + 1}</p>
-                        <p className="margin-right">{weatherForcasts[1]}&#176;C</p>
-                        <p className="margin-right">{dailyDescription[1]}</p>
+                        <p className="day-data--text">{day_2}</p>
+                        <div className="day-data--text">
+                            <img
+                                src={weatherForcasts[1] > 32 ? "/img/clearDay.png" : "/img/normalDay.png"}
+                                alt="Weather_Image"
+                                className=""
+                            />
+                            <p className="day-data--text">{weatherForcasts[1]}&#176;C</p>
+                        </div>
+                        <p className="day-data--text">{dailyDescription[1]}</p>
                     </div>
+
                     <div className="day-data">
-                        <p className="margin-right">{months[curr.getMonth()]} {curr.getDate() + 2}</p>
-                        <p className="margin-right">{weatherForcasts[2]}&#176;C</p>
-                        <p className="margin-right">{dailyDescription[2]}</p>
+                        <p className="day-data--text">{day_3}</p>
+                        <div className="day-data--text">
+                            <img
+                                src={weatherForcasts[2] > 32 ? "/img/normalDay.png" : "/img/rainyDay.png"}
+                                alt="Weather_Image"
+                                className=""
+                            />
+                            <p>{weatherForcasts[2]}&#176;C</p>
+                        </div>
+                        <p className="day-data--text">{dailyDescription[2]}</p>
                     </div>
                 </div>
                 )
@@ -116,23 +157,24 @@ const GetWeather = (props) => {
         }
     }
 
-    // console.log(weatherData);
-    // console.log(dailyDescription);
-    // console.log("Daily Forcast: ", weatherForcasts);
-
-
-
     return (
         <div className="get-weather">
             <div className="get-weather__time">
-                <p className="get-weather__time--text">{curr.getHours()}:{curr.getMinutes()}</p>
-                <p className="get-weather__time--text">{months[curr.getMonth()]}</p>
-                <p className="get-weather__time--text">{curr.getDate()}</p>
+                <p className="get-weather__time--text get-weather--color">{curr.getHours()}:{curr.getMinutes()}</p>
+                <p className="get-weather__time--text get-weather--color">{months[curr.getMonth()]}</p>
+                <p className="get-weather__time--text get-weather--color">{curr.getDate()}</p>
             </div>
 
-            <p className="get-weather__time--text">{place}</p>
+            <p className="get-weather__time--text get-weather--place">{place}</p>
 
-            <p className="get-weather__time--text">{weatherForcasts[0]}&#176;C</p>
+            <div className="get-weather--temp">
+                <img
+                    src={weatherForcasts[0] > 34 ? "/img/clearDay.png" : "/img/normalDay.png"}
+                    alt="Weather_Image"
+                    className=""
+                />
+                <p>{weatherForcasts[0]}&#176;C</p>
+            </div>
 
             <p onClick={onclickSetDisplay} className="three-days">Next Three Days Forcast</p>
 

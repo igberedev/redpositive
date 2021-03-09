@@ -13,7 +13,8 @@ export class App extends React.Component {
 		
 		this.state = {
 			lat: "",
-            long: "",
+            long: ""
+
 		}
 	}
 
@@ -32,14 +33,18 @@ export class App extends React.Component {
                 <div className="app">
                     <h1 className="header">Agwara Nnaemeka Solution</h1>
                     <div className="weather-forex">
-                        <GetWeather latitude={this.state.lat} longitude={this.state.long} />
-                        
-                        <ExchangeRate />
+                        <div className="test-1">
+                            <GetWeather latitude={this.state.lat} longitude={this.state.long} />
+                        </div>
+
+                        <div className="test-2">
+                            <MapContainer latitude={this.state.lat} longitude={this.state.long} />
+                        </div>
+
+                        <div className="test-3">
+                            <ExchangeRate />
+                        </div>
                     </div>
-
-                    <MapContainer latitude={this.state.lat} longitude={this.state.long} />
-                    
-
                 </div>
             )
         } else {

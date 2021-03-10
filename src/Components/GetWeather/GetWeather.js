@@ -37,9 +37,9 @@ const GetWeather = (props) => {
 
         setDay_1(new Date().toDateString().substr(0, 10))
 
-        setDay_2(new Date(1615300090176 + 86400000).toDateString().substr(0, 10))
+        setDay_2(new Date(new Date().getTime() + 86400000).toDateString().substr(0, 10))
 
-        setDay_3(new Date(1615300090176 + 86400000 + 86400000).toDateString().substr(0, 10))
+        setDay_3(new Date(new Date().getTime() + 86400000 + 86400000).toDateString().substr(0, 10))
     
     
         // Get the Weather data for the next three days
